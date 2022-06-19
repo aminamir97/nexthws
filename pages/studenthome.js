@@ -108,6 +108,8 @@ export default function Album() {
       if (val && tokens.type == "student") {
         setLoad(false);
         setLogged(true);
+        setIndex(0);
+        changeSearch(0);
         // router.replace("/studenthome");
       } else {
         router.replace("/studentlogin");
