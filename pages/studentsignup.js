@@ -107,8 +107,6 @@ export default function SignUp() {
       // );
       // const dd = JSON.parse(localStorage.getItem("tokens"));
       router.replace("/studentlogin");
-
-      console.log("fetch res = ", res);
     } catch (error) {
       console.log("fetch error", error);
     }

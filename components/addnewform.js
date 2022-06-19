@@ -116,7 +116,6 @@ export default function AddNewHomeWork({
                 value={studentValue}
                 onChange={(item) => {
                   setStudent(item.target.value);
-                  console.log("changing ", item.target.value);
                 }}
               >
                 {studentsList.map((s) => {

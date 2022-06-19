@@ -117,7 +117,6 @@ export default function Album() {
           },
         });
         const result = await resp.json();
-        console.log("resp = ", result);
         if (result.result == false) throw "result error";
         setTbData(result.data);
         setTimeout(() => {
@@ -161,7 +160,6 @@ export default function Album() {
           }
         );
         const result = await resp.json();
-        console.log("resp = ", result);
         if (result.result == false) throw "result error";
         handleModel(false);
         getHws();
@@ -197,7 +195,6 @@ export default function Album() {
           },
         });
         const result = await resp.json();
-        console.log("resp = ", result);
         if (result.result == false) throw "result error";
         setStudents(result.data);
         setTimeout(() => {
@@ -238,7 +235,6 @@ export default function Album() {
           },
         });
         const result = await resp.json();
-        console.log("resp = ", result);
         if (result.result == false) throw "result error";
 
         setTimeout(() => {

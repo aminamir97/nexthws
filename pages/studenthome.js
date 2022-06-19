@@ -77,14 +77,13 @@ export default function Album() {
           },
         });
         const result = await resp.json();
-        console.log("resp = ", result);
+
         if (result.result == false) throw "result error";
         setTbData(result.data);
         setTimeout(() => {
           setLoading(false);
         }, "1500");
         const dd = new Date(result.data[0].created_at);
-        console.log(dd);
       } else {
         throw "cant make request no auth";
       }

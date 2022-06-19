@@ -79,13 +79,10 @@ function StudentSignin(props) {
     } else {
       console.log("not enough data", data.get("email").trim().length);
     }
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+
     const ss = fetch("https://aminexpress.herokuapp.com" + "/amin").then(
       (res) => {
-        console.log("im after cookie ", res.headers);
+        console.log("im after cookie ");
       }
     );
   };
@@ -109,7 +106,6 @@ function StudentSignin(props) {
       );
 
       const res = await resp.json();
-      console.log(res.data);
       localStorage.setItem(
         "tokens",
         JSON.stringify({
@@ -120,8 +116,6 @@ function StudentSignin(props) {
       );
       const dd = JSON.parse(localStorage.getItem("tokens"));
       router.replace("/studenthome");
-
-      console.log("fetch res = ", dd);
     } catch (error) {
       console.log("fetch error", error);
     }
