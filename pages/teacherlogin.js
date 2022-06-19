@@ -95,7 +95,6 @@ export default function TeacherSignIn() {
       );
 
       const res = await resp.json();
-      console.log("response is = ", res);
       if (res.result == false) throw "not done sign in teacher";
 
       localStorage.setItem(
